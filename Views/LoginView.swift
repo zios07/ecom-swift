@@ -9,7 +9,7 @@
 import SwiftUI
 import Combine
 
-struct ContentView: View {
+struct LoginView: View {
     
     @State var username: String = ""
     @State var password: String = ""
@@ -20,10 +20,10 @@ struct ContentView: View {
         NavigationView {
             Form{
                 Section {
-                    Text("Welcome to Mezos Store !").font(.headline)
+                    Text("Login").font(.headline)
                 }
                 Section {
-                    TextField("Username", text: $username)
+                    TextField("Username", text: $username).autocapitalization(.none)
                     SecureField("Password", text: $password).textContentType(.newPassword).autocapitalization(.none)
                 }
                 Section {
@@ -37,15 +37,13 @@ struct ContentView: View {
                             }
                         }
                     }
-                    
                 }
             }
         }
-        
     }
     
     func login() {
-        let authReq = AuthRequest(username: username, password: password)
+        let authReq = Account(id: nil, username: username, password: password)
         self.authenticationService.login(req: authReq)
     }
     
@@ -56,6 +54,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        LoginView()
     }
 }
