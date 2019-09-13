@@ -27,8 +27,9 @@ class AuthenticationService {
                     case 200:
                         // login success, redirect to home screen
                         print("Logged in")
-                        let token = data?.base64EncodedData()
-                        
+                        print(data!)
+                        let token = data?.base64EncodedString()
+                        print(token!)
                     case 401:
                         // unauthorized
                         print("Bad creds hon")

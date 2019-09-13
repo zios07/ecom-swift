@@ -1,21 +1,21 @@
 //
-//  HomeVIew.swift
+//  HomeView.swift
 //  mezos
 //
-//  Created by ZiOS on 8/28/19.
+//  Created by ZiOS on 9/12/19.
 //  Copyright © 2019 ZiOS. All rights reserved.
 //
 
 import SwiftUI
 
-struct HomeVIew: View {
+struct HomeView: View {
     var body: some View {
-        Text("You are HEREEE !!! WELCOME").font(.largeTitle)
+        Text(/*@START_MENU_TOKEN@*/"Hello World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct HomeVIew_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeVIew()
+        HomeView()
     }
 }
